@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install --force",
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "https://karini-ai-assignment-server.vercel.app/:path*"
+    }
+  ]
+}
