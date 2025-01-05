@@ -94,9 +94,6 @@ npm run start:dev
 
 # Run in production mode
 npm run start:prod
-
-# Run tests
-npm run test
 ```
 
 The API server will be running at [http://localhost:3001](http://localhost:3001).
