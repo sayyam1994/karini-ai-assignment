@@ -15,9 +15,4 @@ export class ProductController {
   async search(@Query('q') query: string) {
     return this.productsService.search(query)
   }
-
-  @Post()
-  async create(@Body() product: Partial<Product>) {
-    return this.productsService.create(product)
-  }
 }

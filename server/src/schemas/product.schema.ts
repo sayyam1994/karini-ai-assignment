@@ -1,6 +1,42 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'
 import { Document } from 'mongoose'
 
+@Schema({ _id: false })
+export class VariantImage {
+  @Prop()
+  ImageSrc: string
+}
+
+@Schema({ _id: false })
+export class Variant {
+  @Prop()
+  VariantSKU: string
+
+  @Prop()
+  VariantGrams: number
+
+  @Prop()
+  VariantInventoryTracker: string
+
+  @Prop()
+  VariantInventoryQty: number
+
+  @Prop()
+  VariantInventoryPolicy: string
+
+  @Prop()
+  VariantFulfillmentService: string
+
+  @Prop()
+  VariantPrice: number
+
+  @Prop()
+  VariantCompareAtPrice: string
+
+  @Prop({ type: [VariantImage] })
+  Images: VariantImage[]
+}
+
 @Schema()
 export class Product extends Document {
   @Prop()
@@ -39,32 +75,8 @@ export class Product extends Document {
   @Prop()
   Option3Value: string
 
-  @Prop()
-  VariantSKU: string
-
-  @Prop()
-  VariantGrams: number
-
-  @Prop()
-  VariantInventoryTracker: string
-
-  @Prop()
-  VariantInventoryQty: number
-
-  @Prop()
-  VariantInventoryPolicy: string
-
-  @Prop()
-  VariantFulfillmentService: string
-
-  @Prop()
-  VariantPrice: number
-
-  @Prop()
-  VariantCompareAtPrice: string
-
-  @Prop()
-  ImageSrc: string
+  @Prop({ type: [Variant] })
+  Variants: Variant[]
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product)

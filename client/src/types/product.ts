@@ -12,6 +12,10 @@ export interface Product {
   Option2Value: string
   Option3Name: string
   Option3Value: string
+  Variants: Variant[]
+}
+
+export interface Variant {
   VariantSKU: string
   VariantGrams: number
   VariantInventoryTracker: string
@@ -20,5 +24,5 @@ export interface Product {
   VariantFulfillmentService: string
   VariantPrice: number
   VariantCompareAtPrice: string
-  ImageSrc: string
+  Images: { ImageSrc: string }[]
 }
