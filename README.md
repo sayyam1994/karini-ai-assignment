@@ -2,6 +2,10 @@
 
 A full-stack simple e-commerce application with shopping cart feature built with Next.js and NestJS.
 
+## Live demo
+
+https://karini-ai-assignment.vercel.app/
+
 ## Project Structure
 
 The project is divided into two main parts:
@@ -40,6 +44,8 @@ server
 
 ### Getting Started
 
+#### To run this locally follow
+
 ```bash
 cd client
 
@@ -75,6 +81,8 @@ The frontend application will be running at [http://localhost:3000](http://local
 
 ### Getting Started
 
+#### To run this locally follow
+
 ```bash
 cd server
 
@@ -100,7 +108,7 @@ The API server will be running at [http://localhost:3001](http://localhost:3001)
 Create a `.env.local` file in the client directory:
 
 ```
-NEXT_PUBLIC_API_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
 
 ### Server
